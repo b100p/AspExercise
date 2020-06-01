@@ -35,18 +35,18 @@ namespace AspExercise
         {
             Session["nbclient"] = drpClient.SelectedValue;
             if (Request.QueryString["lang"] == null)
-                Response.Redirect("OrderList.aspx?lang=En");
+                Response.Redirect("WebForms/OrderList.aspx?lang=En");
             else
-               Response.Redirect("OrderList.aspx?lang=" + Request.QueryString["lang"].ToString());
+               Response.Redirect("WebForms/OrderList.aspx?lang=" + Request.QueryString["lang"].ToString());
         }
 
         protected void DisplayOrderbtn_Click(object sender, EventArgs e)
         {
             Session["nbclient"] = drpClient.SelectedValue;
             if (Request.QueryString["lang"] == null)
-                Response.Redirect("DisplayOrder.aspx?lang=En");
+                Response.Redirect("WebForms/DisplayOrder.aspx?lang=En");
             else
-                Response.Redirect("DisplayOrder.aspx?lang=" + Request.QueryString["lang"].ToString());
+                Response.Redirect("WebForms/DisplayOrder.aspx?lang=" + Request.QueryString["lang"].ToString());
         }
         protected override void InitializeCulture()
         {
